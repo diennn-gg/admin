@@ -114,11 +114,11 @@ export default function ExpenseTableClient({ expenses, categories = [], paginati
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>Ngày</th>
-                <th>Mục chi</th>
-                <th>Danh mục</th>
-                <th>Số tiền</th>
-                <th style={{ width: '120px' }}>Thao tác</th>
+                <th style={{ minWidth: '100px' }}>Ngày</th>
+                <th style={{ minWidth: '180px' }}>Mục chi</th>
+                <th style={{ minWidth: '140px' }}>Danh mục</th>
+                <th style={{ minWidth: '120px' }}>Số tiền</th>
+                <th style={{ width: '120px', minWidth: '120px' }}>Thao tác</th>
               </tr>
             </thead>
             <tbody>

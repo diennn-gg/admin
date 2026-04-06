@@ -77,6 +77,7 @@
 
 .mainContent {
   flex: 1;
+  min-width: 0;
   margin-left: 260px;
   display: flex;
   flex-direction: column;
@@ -94,6 +95,34 @@
   position: sticky;
   top: 0;
   z-index: 5;
+}
+
+.headerTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.closeSidebarBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.mobileOverlay {
+  display: none;
 }
 
 .headerTitle {
@@ -124,4 +153,52 @@
 .pageContent {
   padding: 2rem;
   flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+  
+  .mainContent {
+    margin-left: 0;
+  }
+  
+  .menuBtn {
+    display: flex;
+  }
+  
+  .closeSidebarBtn {
+    display: flex;
+  }
+  
+  .sidebarHeader {
+    justify-content: space-between;
+  }
+  
+  .mobileOverlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 9;
+  }
+  
+  .header {
+    padding: 0 1rem;
+  }
+  
+  .pageContent {
+    padding: 1rem;
+  }
 }

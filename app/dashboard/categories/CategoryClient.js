@@ -68,9 +68,9 @@ export default function CategoryClient({ categories }) {
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>Tên danh mục</th>
-                <th>Mã màu</th>
-                <th style={{ width: '120px' }}>Thao tác</th>
+                <th style={{ minWidth: '180px' }}>Tên danh mục</th>
+                <th style={{ minWidth: '120px' }}>Mã màu</th>
+                <th style={{ width: '120px', minWidth: '120px' }}>Thao tác</th>
               </tr>
             </thead>
             <tbody>

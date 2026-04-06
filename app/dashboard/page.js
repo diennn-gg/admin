@@ -111,8 +111,8 @@ export default async function DashboardPage() {
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginTop: '3rem' }}>
-        <div className={styles.recentSection} style={{ marginTop: 0 }}>
+      <div className={styles.twoColumns}>
+        <div className={styles.recentSection}>
           <div className={styles.recentHeader}>
             <h2>Chi tiêu gần đây</h2>
             <Link href="/dashboard/expenses" className={styles.viewAllBtn}>
@@ -120,7 +120,7 @@ export default async function DashboardPage() {
             </Link>
           </div>
 
-          <div className="glass-panel">
+          <div className="glass-panel" style={{ overflowX: 'auto' }}>
             {recentExpenses.length === 0 ? (
               <div className={styles.emptyState}>
                 Chưa có khoản chi tiêu nào.
@@ -129,9 +129,9 @@ export default async function DashboardPage() {
               <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
                 <thead>
                   <tr style={{ borderBottom: '1px solid var(--panel-border)', color: 'var(--text-secondary)' }}>
-                    <th style={{ padding: '1rem' }}>Mục chi</th >
-                    <th style={{ padding: '1rem' }}>Ngày</th>
-                    <th style={{ padding: '1rem', textAlign: 'right' }}>Số tiền</th>
+                    <th style={{ padding: '1rem', minWidth: '180px' }}>Mục chi</th >
+                    <th style={{ padding: '1rem', minWidth: '100px' }}>Ngày</th>
+                    <th style={{ padding: '1rem', textAlign: 'right', minWidth: '120px' }}>Số tiền</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -157,12 +157,12 @@ export default async function DashboardPage() {
           </div>
         </div>
 
-        <div className={styles.recentSection} style={{ marginTop: 0 }}>
+        <div className={styles.recentSection}>
           <div className={styles.recentHeader}>
             <h2>Tổng hợp từng tháng</h2>
           </div>
 
-          <div className="glass-panel">
+          <div className="glass-panel" style={{ overflowX: 'auto' }}>
             {monthlySummaryList.length === 0 ? (
               <div className={styles.emptyState}>
                 Chưa có dữ liệu thống kê.
