@@ -3,7 +3,7 @@ import { decrypt } from '@/lib/auth'
 
 const protectedRoutes = ['/dashboard']
 
-export async function middleware(request) {
+export async function proxy(request) {
   const path = request.nextUrl.pathname
   
   // Kiểm tra nếu đường dẫn nằm trong danh sách cần bảo vệ (Dashboard và các trang con)
