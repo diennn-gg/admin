@@ -87,7 +87,7 @@ export default function DashboardLayout({ children }) {
             </div>
           </div>
           <div className={styles.userProfile}>
-            <span>Quản trị viên</span>
+            <span className={styles.adminText}>Quản trị viên</span>
             <div className={styles.avatar}>A</div>
           </div>
         </header>

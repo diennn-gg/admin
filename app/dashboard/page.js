@@ -129,9 +129,9 @@ export default async function DashboardPage() {
               <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
                 <thead>
                   <tr style={{ borderBottom: '1px solid var(--panel-border)', color: 'var(--text-secondary)' }}>
-                    <th style={{ padding: '1rem', minWidth: '180px' }}>Mục chi</th >
+                    <th style={{ padding: '1rem', minWidth: '160px' }}>Mục chi</th>
                     <th style={{ padding: '1rem', minWidth: '100px' }}>Ngày</th>
-                    <th style={{ padding: '1rem', textAlign: 'right', minWidth: '120px' }}>Số tiền</th>
+                    <th style={{ padding: '1rem', textAlign: 'right', minWidth: '110px' }}>Số tiền</th>
                   </tr>
                 </thead>
                 <tbody>

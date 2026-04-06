@@ -138,6 +138,10 @@
   font-weight: 500;
 }
 
+.adminText {
+  display: inline;
+}
+
 .avatar {
   width: 36px;
   height: 36px;
@@ -200,5 +204,9 @@
   
   .pageContent {
     padding: 1rem;
+  }
+  
+  .adminText {
+    display: none;
   }
 }

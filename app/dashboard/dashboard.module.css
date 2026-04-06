@@ -61,6 +61,7 @@
 
 .recentSection {
   margin-top: 2rem;
+  min-width: 0;
 }
 
 .recentHeader {
@@ -84,18 +85,18 @@
 
 .twoColumns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 2rem;
   margin-top: 3rem;
 }
 
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   
   .twoColumns {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
   }
